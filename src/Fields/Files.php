@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebess\AdvancedNovaMediaLibrary\Fields;
+namespace DigitalTunnel\NovaMediaLibrary\Fields;
 
 /**
  * Class Files
@@ -11,7 +11,7 @@ class Files extends Images
 {
     protected $defaultValidatorRules = [];
 
-    public $meta = ['type' => 'file'];
+    public array $meta = ['type' => 'file'];
 
     public function __construct($name, $attribute = null, $resolveCallback = null)
     {

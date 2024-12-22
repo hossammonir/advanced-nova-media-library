@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebess\AdvancedNovaMediaLibrary\Fields;
+namespace DigitalTunnel\NovaMediaLibrary\Fields;
 
 class Images extends Media
 {

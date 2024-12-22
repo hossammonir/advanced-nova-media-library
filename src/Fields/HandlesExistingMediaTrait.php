@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebess\AdvancedNovaMediaLibrary\Fields;
+namespace DigitalTunnel\NovaMediaLibrary\Fields;
 
 use Illuminate\Support\Collection;
 use Laravel\Nova\Http\Requests\NovaRequest;

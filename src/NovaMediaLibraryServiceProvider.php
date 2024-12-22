@@ -1,13 +1,13 @@
 <?php
 
-namespace Ebess\AdvancedNovaMediaLibrary;
+namespace DigitalTunnel\NovaMediaLibrary;
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
 use Illuminate\Support\ServiceProvider;
 
-class AdvancedNovaMediaLibraryServiceProvider extends ServiceProvider
+class NovaMediaLibraryServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -34,7 +34,7 @@ class AdvancedNovaMediaLibraryServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-            ->prefix('nova-vendor/ebess/advanced-nova-media-library')
+            ->prefix('nova-vendor/digitaltunnel/nova-media-library')
             ->group(__DIR__.'/../routes/api.php');
     }
 
@@ -46,7 +46,7 @@ class AdvancedNovaMediaLibraryServiceProvider extends ServiceProvider
     protected function loadTranslations()
     {
         $this->loadJSONTranslationsFrom(__DIR__ . '/../resources/lang');
-        $this->loadJSONTranslationsFrom(lang_path('vendor/advanced-nova-media-library'));
+        $this->loadJSONTranslationsFrom(lang_path('vendor/nova-media-library'));
     }
 
     /**
@@ -59,6 +59,6 @@ class AdvancedNovaMediaLibraryServiceProvider extends ServiceProvider
         $locale = $this->app->getLocale();
 
         Nova::translations(__DIR__ . "/../resources/lang/{$locale}.json");
-        Nova::translations(lang_path("vendor/advanced-nova-media-library/$locale.json"));
+        Nova::translations(lang_path("vendor/nova-media-library/$locale.json"));
     }
 }

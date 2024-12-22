@@ -1,6 +1,6 @@
 {
-    "name": "ebess/advanced-nova-media-library",
-    "description": "Laravel Nova tools for managing the Spatie media library.",
+    "name": "digitaltunnel/nova-media-library",
+    "description": "Media Library for Laravel Nova using Spatie Media Library",
     "keywords": [
         "laravel",
         "nova"
@@ -13,25 +13,40 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "laravel/framework": "^8.0|^9.0|^10.0|^11.0",
-        "laravel/nova": "^5.0",
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "symfony/polyfill-php83": "^1.28",
         "spatie/laravel-medialibrary": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^7.8",
+        "larastan/larastan": "^2.4",
+        "laravel/nova": "^5.0",
+        "laravel/nova-devtool": "^1.0.1",
+        "laravel/pint": "^1.17",
+        "orchestra/pest-plugin-testbench": "^2.0",
+        "orchestra/testbench": "^8.24|^9.2",
+        "phpstan/phpstan": "^1.11",
+        "spatie/laravel-ray": "^1.39"
     },
     "autoload": {
         "psr-4": {
-            "Ebess\\AdvancedNovaMediaLibrary\\": "src/"
+            "DigitalTunnel\\NovaMediaLibrary\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ebess\\AdvancedNovaMediaLibrary\\AdvancedNovaMediaLibraryServiceProvider"
+                "DigitalTunnel\\NovaMediaLibrary\\NovaMediaLibraryServiceProvider"
             ]
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

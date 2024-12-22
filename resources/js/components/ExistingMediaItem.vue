@@ -5,7 +5,7 @@
     <div class="overflow-hidden relative">
       <img v-if="'__media_urls__' in item && 'indexView' in item.__media_urls__" :src="item.__media_urls__.indexView" class="block w-full" style="height: 200px; object-fit: contain;"/>
       <div class="absolute top-0 right-0 mt-3 mr-3 hidden group-hover:block">
-        <DefaultButton type="button">{{ __('Select') }}</DefaultButton>
+        <Button type="button">{{ __('Select') }}</Button>
       </div>
     </div>
     <div class="p-3">
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { Button } from 'laravel-nova-ui';
+
 export default {
   props: {
     item: {

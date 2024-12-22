@@ -36,10 +36,10 @@
     <span v-if="editable" class="">
       <input :id="`__media__${field.attribute}`" :multiple="multiple" ref="file" class="form-file-input" type="file" :disabled="uploading" @change="add"/>
       <label :for="`__media__${field.attribute}`" class="">
-        <DefaultButton type="button" @click.prevent="focusFileInput">
+        <Button type="button" @click.prevent="focusFileInput">
           <template v-if="uploading">{{ __('Uploading') }} ({{ uploadProgress }}%)</template>
           <template v-else>{{ label }}</template>
-        </DefaultButton>
+        </Button>
       </label>
     </span>
 
@@ -55,6 +55,7 @@
 
 
 <script>
+import { Button } from 'laravel-nova-ui';
 import Vapor from "laravel-vapor";
 import SingleMedia from './SingleMedia';
 import SingleFile from './SingleFile';

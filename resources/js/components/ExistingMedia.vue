@@ -32,7 +32,7 @@
 
           <!-- Close -->
           <div class="px-4 ml-auto self-center">
-            <OutlineButton type="button" @click="close">{{ __('Close') }}</OutlineButton>
+            <Button type="button" @click="close">{{ __('Close') }}</Button>
           </div>
         </div>
 
@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import { Button } from 'laravel-nova-ui';
 import ExistingMediaItem from './ExistingMediaItem';
 import debounce from 'lodash/debounce';
 

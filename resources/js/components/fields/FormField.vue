@@ -7,9 +7,9 @@
                  :has-error="hasError" :first-error="firstError"/>
 
         <div v-if="field.existingMedia">
-          <OutlineButton type="button" class="mt-2" @click.prevent="existingMediaOpen = true">
+          <Button type="button" class="mt-2" @click.prevent="existingMediaOpen = true">
             {{ openExistingMediaLabel }}
-          </OutlineButton>
+          </Button>
           <existing-media :open="existingMediaOpen" @close="existingMediaOpen = false" @select="addExistingItem"/>
         </div>
         <help-text
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { Button } from 'laravel-nova-ui';
 import {FormField, HandlesValidationErrors} from 'laravel-nova';
 import Gallery from '../Gallery';
 import FullWidthField from '../FullWidthField';

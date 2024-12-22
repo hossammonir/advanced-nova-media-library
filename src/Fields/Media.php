@@ -1,6 +1,6 @@
 <?php
 
-namespace Ebess\AdvancedNovaMediaLibrary\Fields;
+namespace DigitalTunnel\NovaMediaLibrary\Fields;
 
 // @TODO Rule contract is deprecated since laravel/framework v10.0, replace with ValidationRule once min version is 10.
 use Illuminate\Contracts\Validation\Rule;
@@ -35,7 +35,7 @@ class Media extends Field
 
     protected $defaultValidatorRules = [];
 
-    public $meta = ['type' => 'media'];
+    public array $meta = ['type' => 'media'];
 
     public function serializeMediaUsing(callable $serializeMediaUsing): self
     {

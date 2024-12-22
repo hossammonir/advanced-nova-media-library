@@ -23,13 +23,13 @@
 
                 <div class="bg-30 px-6 py-3 flex">
                     <div class="flex items-center ml-auto">
-                        <button type="button" class="btn text-80 font-normal h-9 px-3 mr-3 btn-link" @click.prevent="handleClose">
+                        <Button type="button" class="btn text-80 font-normal h-9 px-3 mr-3 btn-link" @click.prevent="handleClose">
                             {{__('Cancel')}}
-                        </button>
+                        </Button>
 
-                        <button type="submit" class="btn btn-default btn-primary">
+                        <Button type="submit" class="btn btn-default btn-primary">
                             {{__('Update')}}
-                        </button>
+                        </Button>
                     </div>
                 </div>
             </form>
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { Button } from 'laravel-nova-ui';
+
   export default {
     props: {
         fields: {
